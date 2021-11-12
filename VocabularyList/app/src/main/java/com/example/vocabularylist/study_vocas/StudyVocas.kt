@@ -17,12 +17,6 @@ class StudyVocas : AppCompatActivity(), View.OnClickListener {
     private lateinit var btMoveToJobVocas : Button
     private lateinit var btMoveToCostomVocas : Button
 
-    private var vocas : Vocas? = null
-
-    companion object{
-        const val ANIMAL_VOCAS = "animal_vocas"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_study_vocas)
@@ -33,9 +27,6 @@ class StudyVocas : AppCompatActivity(), View.OnClickListener {
         btMoveToJobVocas = findViewById(R.id.btMoveToJobVocas)
         btMoveToCostomVocas = findViewById(R.id.btMoveToCostomVocas)
 
-        if(intent.hasExtra(MainActivity.VOCAS)){
-            vocas = intent.getParcelableExtra(MainActivity.VOCAS) as Vocas?
-        }
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -43,14 +34,14 @@ class StudyVocas : AppCompatActivity(), View.OnClickListener {
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
+
+        btMoveToAnimalVocas.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btMoveToAnimalVocas -> {
                 val mIntent = Intent(this@StudyVocas, VocasList::class.java)
-                mIntent.putExtra(ANIMAL_VOCAS, vocas?.getAnimal())
-
                 startActivity(mIntent)
             }
         }

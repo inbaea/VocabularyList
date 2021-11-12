@@ -7,19 +7,13 @@ import android.view.View
 import android.widget.Button
 import com.example.vocabularylist.R
 import com.example.vocabularylist.study_vocas.StudyVocas
-import com.example.vocabularylist.vocas.Vocas
 
-open class MainActivity : AppCompatActivity(), View.OnClickListener {
+
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btMoveToStudyVocas : Button
     private lateinit var btMoveToReviewVocas : Button
     private lateinit var btMoveToBookmark : Button
     private lateinit var btMoveToAddNewVocabulary : Button
-
-    val vocas = Vocas()
-
-    companion object{
-        val VOCAS = "VOCAS"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +34,6 @@ open class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(v?.id) {
             R.id.btMoveToStudyVocas -> {
                 val mIntent = Intent(this@MainActivity, StudyVocas::class.java)
-                mIntent.putExtra(VOCAS, vocas)
                 startActivity(mIntent)
             }
 
