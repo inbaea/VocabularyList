@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/CustomNoActionBarTheme"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_border"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_star_24"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="40dp"
+            android:text="즐겨찾기"
+            android:textSize="25dp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPictureListOfBookmark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+</LinearLayout>

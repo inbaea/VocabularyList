@@ -19,31 +19,28 @@
         android:layout_width="200dp"
         android:layout_height="200dp">
 
+
         <ImageView
             android:id="@+id/ivStudyVoca"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/ic_baseline_favorite_24"
             android:background="@drawable/rectangle_border"
+            android:scaleType="centerCrop"
             />
 
-<!--        <ImageView-->
-<!--            android:layout_width="76dp"-->
-<!--            android:layout_height="75dp"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:src="@drawable/ic_baseline_arrow_left_40" />-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="22dp"-->
-<!--            android:layout_height="22dp"-->
-<!--            android:layout_gravity="right|center_vertical"-->
-<!--            android:src="@drawable/ic_baseline_arrow_right_40" />-->
+        <ImageView
+            android:id="@+id/ivAddDeleteStarButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_star_border_24"
+            />
     </FrameLayout>
 
     <TextView
         android:id="@+id/tvStudyVoca"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="20dp"
         android:textSize="25dp"
         android:text="하트"
@@ -51,12 +48,12 @@
         android:background="@drawable/rectangle_border"
         />
 
-    <TextView
+    <ImageView
+        android:id="@+id/ivWordSpeech"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="25dp"
-        android:textAlignment="center"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_surround_sound_24"
         android:background="@drawable/rectangle_border"
         />
 

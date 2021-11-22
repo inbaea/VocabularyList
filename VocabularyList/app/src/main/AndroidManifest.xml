@@ -2,14 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vocabularylist">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-        <activity android:name=".study_vocas.VocasList"></activity>
+        android:theme="@style/CustomNoActionBarTheme">
+        <activity android:name=".add_new_vocabulary.AddNewVocabulary"></activity>
+        <activity android:name=".bookmark.Bookmark" />
+        <activity android:name=".study_vocas.VocasList" />
         <activity android:name=".study_vocas.StudyVocas" />
         <activity android:name=".main.MainActivity">
             <intent-filter>

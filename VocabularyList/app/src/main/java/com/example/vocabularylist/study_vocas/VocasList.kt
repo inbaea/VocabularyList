@@ -2,12 +2,13 @@ package com.example.vocabularylist.study_vocas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vocabularylist.R
-import com.example.vocabularylist.adapters.StudyAnimalVocasListAdapter
-import com.example.vocabularylist.vocas.AnimalModel
+import com.example.vocabularylist.adapters.StudyVocasListAdapter
+import com.example.vocabularylist.vocas.VocaModel
 import com.example.vocabularylist.vocas.Vocas
 
 class VocasList : AppCompatActivity() {
@@ -23,25 +24,41 @@ class VocasList : AppCompatActivity() {
         rvPictureListOfTopics = findViewById(R.id.rvPictureListOfTopics)
 
         setSupportActionBar(toolbar)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
 
-        setAnimalVocasList()
+        setVocasList()
     }
 
-    private fun setAnimalVocasList(){
-        val animalVocas = vocas.getAnimal()
+    private fun setVocasList(){
+        var vocaList : ArrayList<VocaModel> = ArrayList()
 
-        val studyAnimalVocasListAdapter = StudyAnimalVocasListAdapter(this, animalVocas)
-        rvPictureListOfTopics.adapter = studyAnimalVocasListAdapter
+        when {
+            intent.hasExtra(StudyVocas.ANIMAL_VOCA_KEY) -> {
+                vocaList = vocas.getAnimalVocas()
+                supportActionBar?.title = "동물"
+            } intent.hasExtra(StudyVocas.PLANT_VOCA_KEY) -> {
+                //vocaList = vocas.getPlantVocas()
+                supportActionBar?.title = "식물"
+            } intent.hasExtra(StudyVocas.JOB_VOCA_KEY) -> {
+                //vocaList = vocas.getJobVocas()
+                supportActionBar?.title = "직업"
+            } intent.hasExtra(StudyVocas.COSTOM_VOCA_KEY) -> {
+                vocaList = vocas.getCustomVocas()
+                supportActionBar?.title = "나만의 단어"
+            }
+        }
+
+        val studyVocasListAdapter = StudyVocasListAdapter(this, vocaList)
+        rvPictureListOfTopics.adapter = studyVocasListAdapter
         rvPictureListOfTopics.layoutManager = GridLayoutManager(this, 2)
 
-        studyAnimalVocasListAdapter.setOnClickListener(object : StudyAnimalVocasListAdapter.OnClickListener{
-            override fun onClick(animal: AnimalModel) {
-                val voca = Voca(animal)
+        studyVocasListAdapter.setOnClickListener(object : StudyVocasListAdapter.OnClickListener{
+            override fun onClick(voca: VocaModel) {
+                val voca = VocaCard(voca, vocas.getBookmarkVocas())
                 voca.show(supportFragmentManager, "Animal_Voca")
             }
         })
