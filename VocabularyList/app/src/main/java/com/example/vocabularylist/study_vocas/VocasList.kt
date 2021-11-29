@@ -40,12 +40,12 @@ class VocasList : AppCompatActivity() {
             intent.hasExtra(StudyVocas.ANIMAL_VOCA_KEY) -> {
                 vocaList = vocas.getAnimalVocas()
                 supportActionBar?.title = "동물"
-            } intent.hasExtra(StudyVocas.PLANT_VOCA_KEY) -> {
-                //vocaList = vocas.getPlantVocas()
-                supportActionBar?.title = "식물"
-            } intent.hasExtra(StudyVocas.JOB_VOCA_KEY) -> {
-                //vocaList = vocas.getJobVocas()
-                supportActionBar?.title = "직업"
+            } intent.hasExtra(StudyVocas.BODY_VOCA_KEY) -> {
+                //vocaList = vocas.getBodyVocas()
+                supportActionBar?.title = "신체"
+            } intent.hasExtra(StudyVocas.FLAG_VOCA_KEY) -> {
+                vocaList = vocas.getFlagVocas()
+                supportActionBar?.title = "국기"
             } intent.hasExtra(StudyVocas.COSTOM_VOCA_KEY) -> {
                 vocaList = vocas.getCustomVocas()
                 supportActionBar?.title = "나만의 단어"
@@ -60,6 +60,13 @@ class VocasList : AppCompatActivity() {
             override fun onClick(voca: VocaModel) {
                 val voca = VocaCard(voca, vocas.getBookmarkVocas())
                 voca.show(supportFragmentManager, "Animal_Voca")
+            }
+        })
+
+        studyVocasListAdapter.setOnClickListener(object : StudyVocasListAdapter.OnClickListener{
+            override fun onClick(voca: VocaModel) {
+                val voca = VocaCard(voca, vocas.getBookmarkVocas())
+                voca.show(supportFragmentManager, "Flag_Voca")
             }
         })
     }

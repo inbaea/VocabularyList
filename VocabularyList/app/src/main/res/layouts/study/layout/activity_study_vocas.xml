@@ -21,18 +21,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="@dimen/study_voca_logo_marginTop">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/study_voca_layoutwidth"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="0.5">
 
             <ImageView
                 android:id="@+id/ivMoveToAnimalVocas"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="@dimen/study_voca_width"
+                android:layout_height="@dimen/study_voca_height"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:src="@drawable/button_animal" />
@@ -41,22 +41,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="35dp"
+                android:textSize="@dimen/study_voca_textsize"
                 android:text="동물"
                 android:textStyle="bold"
                 android:fontFamily="@font/cute"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/study_voca_layoutwidth"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="0.5">
 
             <ImageView
                 android:id="@+id/ivMoveToPlantVocas"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="@dimen/study_voca_width"
+                android:layout_height="@dimen/study_voca_height"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:src="@drawable/button_plant" />
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="35dp"
+                android:textSize="@dimen/study_voca_textsize"
                 android:text="식물"
                 android:textStyle="bold"
                 android:fontFamily="@font/cute"/>
@@ -77,42 +77,42 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="@dimen/study_voca_marginTop">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/study_voca_layoutwidth"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="0.5">
 
             <ImageView
-                android:id="@+id/ivMoveToJobVocas"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:id="@+id/ivMoveToFlagVocas"
+                android:layout_width="@dimen/study_voca_width"
+                android:layout_height="@dimen/study_voca_height"
                 android:layout_gravity="center"
                 android:clickable="true"
-                android:src="@drawable/button_job" />
+                android:src="@drawable/button_flag" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="35dp"
-                android:text="직업"
+                android:textSize="@dimen/study_voca_textsize"
+                android:text="국기"
                 android:textStyle="bold"
                 android:fontFamily="@font/cute"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/study_voca_layoutwidth"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="0.5">
 
             <ImageView
                 android:id="@+id/ivMoveToCostomVocas"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="@dimen/study_voca_width"
+                android:layout_height="@dimen/study_voca_height"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:src="@drawable/button_my_vocas" />
@@ -121,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="35dp"
+                android:textSize="@dimen/study_voca_textsize"
                 android:text="나만의 단어"
                 android:textStyle="bold"
                 android:fontFamily="@font/cute"/>

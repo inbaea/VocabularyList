@@ -12,14 +12,14 @@ import com.example.vocabularylist.R
 class StudyVocas : AppCompatActivity(), View.OnClickListener {
     private lateinit var toolbar : Toolbar
     private lateinit var ivMoveToAnimalVocas : ImageView
-    private lateinit var ivMoveToPlantVocas : ImageView
-    private lateinit var ivMoveToJobVocas : ImageView
+    private lateinit var ivMoveToBodyVocas : ImageView
+    private lateinit var ivMoveToFlagVocas : ImageView
     private lateinit var ivMoveToCostomVocas : ImageView
 
     companion object{
         const val ANIMAL_VOCA_KEY = "animal_key"
-        const val PLANT_VOCA_KEY = "plant_key"
-        const val JOB_VOCA_KEY = "job_key"
+        const val BODY_VOCA_KEY = "body_key"
+        const val FLAG_VOCA_KEY = "flag_key"
         const val COSTOM_VOCA_KEY = "costom_key"
 
     }
@@ -31,8 +31,8 @@ class StudyVocas : AppCompatActivity(), View.OnClickListener {
         toolbar = findViewById(R.id.toolbar_study_vocas)
 
         ivMoveToAnimalVocas = findViewById(R.id.ivMoveToAnimalVocas)
-        ivMoveToPlantVocas = findViewById(R.id.ivMoveToPlantVocas)
-        ivMoveToJobVocas = findViewById(R.id.ivMoveToJobVocas)
+        ivMoveToBodyVocas = findViewById(R.id.ivMoveToBodyVocas)
+        ivMoveToFlagVocas = findViewById(R.id.ivMoveToFlagVocas)
         ivMoveToCostomVocas = findViewById(R.id.ivMoveToCostomVocas)
 
         setSupportActionBar(toolbar)
@@ -54,10 +54,10 @@ class StudyVocas : AppCompatActivity(), View.OnClickListener {
         when(v?.id){
             R.id.ivMoveToAnimalVocas -> {
                 mIntent.putExtra(ANIMAL_VOCA_KEY, true)
-            } R.id.ivMoveToPlantVocas -> {
-                mIntent.putExtra(PLANT_VOCA_KEY, true)
-            } R.id.ivMoveToJobVocas -> {
-                mIntent.putExtra(JOB_VOCA_KEY, true)
+            } R.id.ivMoveToBodyVocas -> {
+                mIntent.putExtra(BODY_VOCA_KEY, true)
+            } R.id.ivMoveToFlagVocas -> {
+                mIntent.putExtra(FLAG_VOCA_KEY, true)
             } R.id.ivMoveToCostomVocas -> {
                 mIntent.putExtra(COSTOM_VOCA_KEY, true)
             }
