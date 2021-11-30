@@ -54,7 +54,7 @@
             android:layout_weight="0.5">
 
             <ImageView
-                android:id="@+id/ivMoveToPlantVocas"
+                android:id="@+id/ivMoveToBodyVocas"
                 android:layout_width="@dimen/study_voca_width"
                 android:layout_height="@dimen/study_voca_height"
                 android:layout_gravity="center"
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="@dimen/study_voca_textsize"
-                android:text="식물"
+                android:text="신체"
                 android:textStyle="bold"
                 android:fontFamily="@font/cute"/>
         </LinearLayout>

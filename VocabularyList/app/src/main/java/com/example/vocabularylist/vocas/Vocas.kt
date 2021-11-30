@@ -56,6 +56,23 @@ class Vocas {
     fun getBodyVocas() : ArrayList<VocaModel>{
         val body = ArrayList<VocaModel>()
 
+        body.add(VocaModel(0, "머리카락", R.drawable.body_hair, "", false))
+        body.add(VocaModel(0, "손", R.drawable.body_hand, "", false))
+        body.add(VocaModel(0, "발", R.drawable.body_foot, "", false))
+        body.add(VocaModel(0, "심장", R.drawable.body_heart, "", false))
+        body.add(VocaModel(0, "얼굴", R.drawable.body_face, "", false))
+        body.add(VocaModel(0, "무릎", R.drawable.body_knee, "", false))
+        body.add(VocaModel(0, "눈썹", R.drawable.body_eyebrow, "", false))
+        body.add(VocaModel(0, "다리", R.drawable.body_legs, "", false))
+        body.add(VocaModel(0, "눈", R.drawable.body_eye, "", false))
+        body.add(VocaModel(0, "입", R.drawable.body_mouth, "", false))
+        body.add(VocaModel(0, "등", R.drawable.body_bakc, "", false))
+        body.add(VocaModel(0, "코", R.drawable.body_nose, "", false))
+        body.add(VocaModel(0, "목", R.drawable.body_neck, "", false))
+        body.add(VocaModel(0, "어깨", R.drawable.body_shoulder, "", false))
+        body.add(VocaModel(0, "팔", R.drawable.body_arm, "", false))
+        body.add(VocaModel(0, "복부", R.drawable.body_abdomen, "", false))
+        body.add(VocaModel(0, "등", R.drawable.body_back, "", false))
 
         return body
     }
